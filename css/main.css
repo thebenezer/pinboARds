@@ -10,7 +10,25 @@ body{
     background-color: #f6f6f6;
 }
 
-li,a,button{
+.header_section{
+    position: absolute;
+    top: -10vh;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 10vh);
+    background: linear-gradient(135deg,#05503a,#15ed88);
+    transform: skewY(-5deg);
+    box-shadow: 0 0 50px rgb(60 117 162 / 40%);
+}
+
+.header_section .navbar{
+    transform: skewY(5deg);
+    position: absolute;
+    top: 24px;
+    font-weight: 300;
+}
+
+/* li,a,button{
     font-family: "Montserrat",sans-serif;
     font-size: 16px;
     color: gray;
@@ -59,4 +77,4 @@ header{
 
 .cta:hover{
     opacity: 0.8;
-}
+} */
