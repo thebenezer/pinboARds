@@ -13,56 +13,58 @@ body{
 .header_section{
     position: absolute;
     top: -10vh;
-    left: 0;
+    /* left: 0; */
     width: 100%;
     height: calc(100% + 10vh);
-    background: linear-gradient(135deg,#05503a,#15ed88);
+    background: linear-gradient(150deg,#330867,#31a7bb);
     transform: skewY(-5deg);
     box-shadow: 0 0 50px rgb(60 117 162 / 40%);
 }
 
-.header_section .navbar{
+.navbar{
     transform: skewY(5deg);
     position: absolute;
-    top: 24px;
-    font-weight: 300;
-}
-
-/* li,a,button{
-    font-family: "Montserrat",sans-serif;
-    font-size: 16px;
-    color: gray;
-    text-decoration: none;
-}
-
-header{
+    background-color: crimson;
+    top: 40px;
+    width: 100%;
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    padding-top: 30px ;
 }
-
 .logo{
+    background-color:darkgreen;
+    flex: 1;
     cursor: pointer;
     height: 25px;
-    margin-right: auto;
+    margin-left: 20px;
+    transition: all 0.3s ease 0s;
 }
-
-.nav-links{
+.navbar nav{
+    background-color:darkgoldenrod;
+    flex: 1;
+}
+.navbar nav ul{
+    display: flex;
+}
+.navbar li,a{
+    font-family: "Montserrat",sans-serif;
+    font-size: 16px;
+    color: #f6f6f6;
+    text-decoration: none;
     list-style: none;
-}
-
-.nav-links li{
     display: inline-block;
     padding: 0px 20px;
 }
-
 .nav-links li a{
     transition: all 0.3s ease 0s;
 }
 .nav-links li a:hover{
-    color: indigo;
+    color: #000000;
 }
+
+/* 
+
 
 .cta{
     margin-left: 20px;
