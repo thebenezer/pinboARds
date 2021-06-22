@@ -12,6 +12,7 @@ body{
     background-color: #f6f6f6;
     font-family: "Open-sans","Roboto",sans-serif;
     font-size: 16px;
+    text-align: center;
 }
 
 .header_section{
@@ -19,10 +20,11 @@ body{
     margin-top: -10vh;
     /* left: 0; */
     width: 100%;
-    height: calc(100% + 20vh);
+    /* height: calc(100% + 20vh); */
     background: linear-gradient(150deg,#330867,#31a7bb);
     transform: skewY(-5deg);
     box-shadow: 0 0 50px rgb(60 117 162 / 40%);
+    padding-bottom: 10vh;
 }
 header{
     padding-top: 10vh;
@@ -47,7 +49,7 @@ li,a,button{
     margin-right: auto;
 }
 
-.nav-links{
+li{
     list-style: none;
 }
 
@@ -103,7 +105,7 @@ li,a,button{
 .cta:hover:before {
 width: 100%;
 }
-
+/* ************************* HEADER SECTION ************************** */
 .header_content{
     margin-top: 50px;
 }
@@ -125,44 +127,186 @@ width: 100%;
     padding: 0.5em 3em;
 }
 
+/* ************************* INTRO ************************** */
+
 .intro_section{
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     text-align: center;
     width: 80%;
     margin: auto;
     /* transform: skewY(5deg); */
 }
 .intro_section h2{
-    font-weight:200;
+    font-weight:300;
     font-size: 40px;
     letter-spacing: 4px;
-    margin: 140px 0 70px 0;
+    margin: 100px 0 60px 0;
+}
+.intro_section h3{
+    font-weight:200;
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.summary{
+    max-width: 500px;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 100px;
 }
 .intro{
-    text-align: center;
+    /* background-color: #330867; */
     display: flex;
     justify-content: space-around;
     width: 100%;
     height: 300px;
+    margin-bottom: 100px;
 }
 .alt{
     flex-direction: row-reverse;
 }
 .intro-info{
-    flex: 1;
+    flex: 2;
     text-align: left;
     margin: auto;
     /* background-color: #330867; */
 }
 .intro-info h3{
-    font-weight:200;
-    font-size: 20px;
+    font-weight:300;
+    font-size: 30px;
     letter-spacing: 2px;
-    margin: 140px 0 70px 0;
+    margin-bottom: 30px;
+}
+.intro-info p{
+    font-weight:100;
+    margin: auto;
 }
 .info-graphic{
-    flex: 1;
+    flex: 3;
 }
 .intro img{
-    width: 60%;
+    width: 70%;
+}
+
+/* ************************* HOW-TO ************************** */
+
+.how-section{
+    width: 100%;
+    background: linear-gradient(150deg,#330867,#31a7bb);
+    transform: skewY(-5deg);
+    box-shadow: 0 0 50px rgb(60 117 162 / 40%);
+    position: relative;
+    color: #f6f6f6;
+}
+.how-section article{
+    padding: 100px 0;
+    transform: skewY(5deg);
+}
+.how-section h2{
+    font-weight:200;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+.how-section .content{
+    width: 650px;
+    margin: 0 auto;
+}
+.how-section .cta{
+    padding: 0.5em 3em;
+}
+/* ************************* SIGNUP ************************** */
+
+.signup-now{
+    width: 100%;
+    /* height: 40vh; */
+}
+.signup-now h2{
+    font-weight:200;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: 100px 0 70px 0;
+}
+.tools{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.tools img{
+    height: 60px;
+}
+/* ************************* FOOTER ************************** */
+
+footer{
+    text-align: center;
+    width: 100%;
+    /* height: 50vh; */
+    background: linear-gradient(90deg,#330867,#31a7bb);
+    position: relative;
+    color: #f6f6f6;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+footer::after{
+    content: "";
+    background: linear-gradient(90deg,#330867,#31a7bb);
+    box-shadow: 0 0 50px rgb(60 117 162 / 40%);
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    top: -10vh;
+    left: 0%;
+    z-index: -1;
+    transform: skewY(-5deg);
+}
+footer .logo{
+    height: 55px;
+}
+
+.footer-links{
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+.footer-links ul{
+    text-align: left;
+    padding: 0 60px;
+}
+.footer-links ul li{
+    padding: 10px;
+}
+.icons{
+    flex: 1;
+    text-align: center;
+    margin: 30px auto;
+}
+.icons a{
+    margin: auto 20px auto 20px;
+    position: relative;
+}
+.icon{
+    width: 30px;
+}
+.icons a::before {
+    content: '';
+    background: #f6f6f6;
+    position:absolute;
+    width: 0%;
+    top: calc(100% + 3px);
+    height: 1px;
+    transition: 0.2s ease-in;
+}
+.icons a:hover::before {
+    width: 100%;
+}
+footer p{
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding: 30px 0 60px;
 }
