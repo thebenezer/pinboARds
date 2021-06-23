@@ -187,9 +187,6 @@ footer p{
 }
 
 @media screen and (max-width: 768px){
-    .mobile{
-        display: unset;
-    }
     
     /* ***************** HAMBURGER *********************** */
     .hamburger{
