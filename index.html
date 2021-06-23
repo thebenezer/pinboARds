@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pinboARds</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
 </head>
 <body>
+    <div class="navbar"> 
+        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
+        <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Demo</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#" class="cta">Signup</a></li>
+            </ul>
+        </nav>
+        
+    </div>
     <section class="header_section">
         <header>
-            <div class="navbar"> 
-                <img class="logo" src="./assets/logo.svg" alt="logo">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Demo</a></li>
-                        <li><a href="#">Login</a></li>
-                        <!-- <li><a href="#" class="cta">Login</a></li> -->
-                    </ul>
-                </nav>
-                <a href="#" class="cta">Signup</a>
-            </div>
+            
             <div class="header_content">
                 <h1>A platform to create, use and share virtual pinboards</h1>
                 <div class="graphic">
@@ -48,7 +55,7 @@
         <div class="intro alt">
             <div class="intro-info">
                 <h3>Create, Modify, Share</h3>
-                <p>Once a PinboARd is created, you can view it using augmented reality. Share any pinboard by making it public, and anyone with the URL link will automatically be able to view the content.</p>
+                <p>Once a PinboARd is created, you can view it using AR. Share any pinboard by making it public.</p>
             </div>
             <div class="info-graphic">
                 <img src="./assets/pic4.svg" alt="">
@@ -78,17 +85,17 @@
     <section class="signup-now">
         <h2>Built With</h2>
         
-        <div class="tools">
+        <div class="tools" style="margin-bottom: 200px;">
             <img src="./assets/three.svg" alt="">
             <img src="./assets/Ar_core.svg" alt="">
             <img src="./assets/WebGL_Logo.svg" alt="">
         </div>
-        <h2>Runs On</h2>
+        <!-- <h2>Runs On</h2>
         <div class="tools" style="margin-bottom: 200px;">
             <img src="./assets/Google_Chrome.svg" alt="">
             <img src="./assets/1920px-Brave_icon_app.png" alt="">
             <img src="./assets/Firefox_logo,_2019.svg" alt="">
-        </div>
+        </div> -->
 
     </section>
 
@@ -96,16 +103,16 @@
         <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
         <div class="footer-links">
             <ul>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Privacy</li>
-                <li>Terms</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
             </ul>
             <ul>
-                <li>Collaborate</li>
-                <li>Bug Report</li>
-                <li>Contribute</li>
-                <li>Reviews</li>
+                <li><a href="#">Collaborate</a></li>
+                <li><a href="#">Bug Report</a></li>
+                <li><a href="#">Contribute</a></li>
+                <li><a href="#">Reviews</a></li>
             </ul>
         </div>
         <div class="icons">
@@ -115,6 +122,8 @@
           </div>
         <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
     </footer>
+
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
