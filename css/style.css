@@ -134,10 +134,19 @@
 
 
 @media screen and (max-width: 768px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .intro-info{
+        text-align: center;
+    }
     .signup-now .tools img{
         height: 20px
     }
-    section{
-        margin:none;
-    }
+    
 }

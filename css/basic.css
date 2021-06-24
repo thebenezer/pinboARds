@@ -183,7 +183,8 @@ footer .logo{
 footer p{
     letter-spacing: 2px;
     font-size: 12px;
-    padding: 30px 0 60px;
+    padding: 30px 10% 60px 10%;
+    margin: auto;
 }
 
 @media screen and (max-width: 768px){
@@ -270,5 +271,15 @@ footer p{
     }
     .nav-links li{
         margin: 10vh auto;
+    }
+
+    /* ***************** FOOTER *********************** */
+    .footer-links ul{
+        text-align: left;
+        padding: 0 10%;
+    }
+    .icons a{
+        margin: auto 5x auto 5px;
+        position: relative;
     }
 }
