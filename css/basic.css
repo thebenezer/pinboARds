@@ -14,20 +14,6 @@ body{
 }
 
 
-.header_section{
-    margin-top: -10vh;
-    width: 100%;
-    background: linear-gradient(150deg,#330867,#31a7bb);
-    transform: skewY(-5deg);
-    box-shadow: 0 0 50px rgb(60 117 162 / 40%);
-    padding-bottom: 100px;
-}
-header{
-    padding-top: 20vh;
-    transform: skewY(5deg);
-    color: #f6f6f6;
-    text-align: center;
-}
 .navbar{
     position: fixed;
     top: 0%;
@@ -112,6 +98,7 @@ width: 100%;
     display: none;
 }
 
+
 /* ************************* FOOTER ************************** */
 
 footer{
@@ -188,6 +175,10 @@ footer p{
 }
 
 @media screen and (max-width: 768px){
+    body{
+        font-size: 12px;
+        text-align: center;
+    }
     
     /* ***************** HAMBURGER *********************** */
     .hamburger{
@@ -272,6 +263,8 @@ footer p{
     .nav-links li{
         margin: 10vh auto;
     }
+
+    
 
     /* ***************** FOOTER *********************** */
     .footer-links ul{
