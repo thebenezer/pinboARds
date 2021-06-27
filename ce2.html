@@ -10,21 +10,23 @@
     <br/>
     <div>
     
-            Text: <input id="item" placeholder="your text" />
+            <!-- Text: <input id="item" type="textarea" placeholder="your text" /> -->
+            Text:<textarea id="item" name="message" rows="10" cols="30"placeholder="Enter your items"></textarea>
     </div>
 
-<canvas id="canvas"></canvas>
+<canvas id="canvas" ></canvas>
 
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
 <script id="jsbin-javascript">
-            var text ;
+            var txt_array=[] ;
 
         window.onload=function(){
             function draw(event) {
                 // var canvas2 = document.getElementById("writecanvas");
                 // var ctx2 = canvas2.getContext("2d");
                 text = document.getElementById('item').value;
+                txt_array= text.split(/\n/);
                 // ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
                 // ctx2.fillStyle = "#3e3e3e";
                 // ctx2.font = "16px Arial";
@@ -42,15 +44,21 @@ var canvas = document.getElementById('canvas'),
 var camera, scene, renderer, geometry, texture, mesh;
 
 function changeCanvas() {
-    ctx.font = '20pt Arial';
-    ctx.fillStyle = 'red';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
     ctx.fillStyle = 'white';
-    ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'black';
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+    ctx.textAlign = "start";
+    // ctx.textBaseline = "middle";
+    ctx.font = '20pt Arial';
+    ctx.fillStyle = 'Green';
+    ctx.fillText("Shopping List", 10, 30);
+
+    ctx.font = '10pt Arial';
+    ctx.fillStyle = 'black';
+    for ( let i = 0; i < txt_array.length; i ++ ) {	
+        ctx.fillText( (i+1)+". "+txt_array[ i ], 10, 50+15 * i );
+    }
 }
 
 function init() {
@@ -66,7 +74,7 @@ function init() {
 
     texture = new THREE.Texture(canvas);
     var material = new THREE.MeshBasicMaterial({ map: texture });
-    geometry = new THREE.PlaneGeometry( 400, 200 );
+    geometry = new THREE.PlaneGeometry( 700, 700 );
     mesh = new THREE.Mesh( geometry, material );
     scene.add( mesh );
 
