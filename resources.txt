@@ -1,0 +1,16 @@
+https://medium.com/chialab-open-source/build-your-location-based-augmented-reality-web-app-c2442e716564
+http://learningthreejs.com/blog/2013/04/30/closing-the-gap-between-html-and-webgl/
+http://www.johannes-raida.de/tutorials/three.js/tutorial06/tutorial06.htm
+https://threejs.org/docs/index.html?q=can#api/en/textures/CanvasTexture
+https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_texture_canvas.html
+https://github.com/mrdoob/three.js/blob/master/examples/css3d_youtube.html
+https://github.com/giantslayer21/pinboARds/deployments
+https://www.programmersought.com/article/45943469139/
+https://tutorialsforar.com/introduction-to-webar-using-arkit-with-safari-and-ar-quicklook/
+https://threejsfundamentals.org/threejs/lessons/threejs-canvas-textures.html
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+https://discourse.threejs.org/t/an-example-of-text-to-canvas-to-texture-to-material-to-mesh-not-too-difficult/13757
+https://hofk.de/main/discourse.threejs/2020/SpriteCanvasText/SpriteCanvasText.html
+https://github.com/makc/Edelweiss/blob/c3e63135f2f57f1a422c30abbeca35e579b84f02/docs/js/AssetManager.js#L245
+https://hofk.de/main/discourse.threejs/BeginnerExample/BeginnerExample.html
+https://css-tricks.com/techniques-for-rendering-text-with-webgl/#article-header-id-2
