@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type='text/css'>
+canvas {
+   border:1px solid red;
+}
+</style>
+
+<script type='text/javascript'>
+
+
+//<![CDATA[ 
+window.onload=function(){
+        function draw(event) {
+            var canvas = document.getElementById("writecanvas");
+            var ctx = canvas.getContext("2d");
+            var text = document.getElementById('item').value
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#3e3e3e";
+            ctx.font = "16px Arial";
+            ctx.fillText(text, 50, 50);
+
+        }
+        window.addEventListener("keyup", draw, true);
+
+        
+    
+}//]]>  
+</script>
+</head>
+<body>
+  <canvas id="writecanvas" width=300 height=300></canvas>
+<br/>
+<div>
+    <form>
+
+        Text: <input id="item" placeholder="your text" />
+        <br>
+      </form>
+</div>
+
+</body>
+</html>

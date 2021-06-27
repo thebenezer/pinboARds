@@ -65,6 +65,9 @@ li{
     width: 100%;
 }
 
+.cta::before{
+    display: none;
+}
 
 .cta{
     position:relative;
@@ -80,7 +83,7 @@ li{
 .cta:hover{
     color: #2599ae;
 }
-.cta:before {
+.cta:after {
     content: '';
     background: #f6f6f6;
     position:absolute;
@@ -91,7 +94,7 @@ li{
     transition: 0.2s ease-in;
     z-index: -1;
 }
-.cta:hover:before {
+.cta:hover:after {
 width: 100%;
 }
 .hamburger{
