@@ -1,171 +1,89 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>three.js ar - hit test</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<!-- <link type="text/css" rel="stylesheet" href="./style/demo.css"> -->
-	</head>
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinboARds</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
+</head>
+<body>
+    <div class="navbar"> 
+        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
+        <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./demo.html">Demo</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#" class="cta">Signup</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+    <section class="header_section">
+        <header class="demo">
+          <h1>Try these demos</h1>
+          <div class="democards">
+            <a href="./demo/d1.html" class="card">
+              <img src="./assets/temp1.jpg" alt="" class="card-img">
+              <h3>Shopping List</h3>
+              <p>Create a shopping list and view it in AR</p>
+            </a>
+            <a href="./demo/d2.html" class="card">
+              <img src="./assets/temp2.jpg" alt="" class="card-img">
+              <h3>Notice Board</h3>
+              <p>Explore the contents of a sample notice board</p>
+            </a>
+            <a href="./demo/d3.html" class="card">
+              <img src="./assets/temp3.jpg" alt="" class="card-img">
+              <h3>Scribble Board</h3>
+              <p>Make a pinboard with hand written/drawn content </p>
+            </a>  
+          <div>
+          
+        </header>
+    </section>
 
-		<div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> ar - hit test<br/>(Chrome Android 81+)
-		</div>
+    <section class="signup-now">
+        <article style="padding-bottom: 200px;">
+            <h2>Want to Get Started?</h2>
+            <div class="content"></div>
+            <div class="graphic"></div>
+            <a class="cta" href="demo.html" style="filter:invert(1);">Signup Now</a>
+        </article>
 
-		<script type="module">
+    </section>
 
-      import * as THREE from './js/three/three.module.js';
-			import { ARButton } from './js/three/webxr/ARButton.js';
-			let container;
-			let camera, scene, renderer;
-			let controller;
+    <footer>
+        <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
+        <div class="footer-links">
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./privacy.html">Privacy</a></li>
+                <li><a href="./terms.html">Terms</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/">Collaborate</a></li>
+                <li><a href="./bugreport.html">Bug Report</a></li>
+                <li><a href="./contribute.html">Contribute</a></li>
+                <li><a href="./reviews.html">Reviews</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <a href="https://github.com/"><img class="icon" src="./assets/github.svg" alt=""></a>
+            <a href="#"><img class="icon" src="./assets/instagram.svg" alt=""></a>
+            <a href="#"><img class="icon" src="./assets/gmail.svg" alt=""></a>
+          </div>
+        <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
+    </footer>
 
-			let reticle;
+    <script src="./js/menu.js"></script>
 
-			let hitTestSource = null;
-			let hitTestSourceRequested = false;
-
-			init();
-			animate();
-
-			function init() {
-
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
-
-				scene = new THREE.Scene();
-
-				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 20 );
-
-				const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
-				light.position.set( 0.5, 1, 0.25 );
-				scene.add( light );
-
-				//
-
-				renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				renderer.xr.enabled = true;
-				container.appendChild( renderer.domElement );
-
-				//
-
-				document.body.appendChild( ARButton.createButton( renderer, { requiredFeatures: [ 'hit-test' ] } ) );
-
-				//
-
-				// const geometry = new THREE.PlaneGeometry( 0.1, 0.1, 0.2, 32 ).translate( 0, 0.1, 0 );
-				const geometry = new THREE.PlaneGeometry(0.75,0.5);
-				var loader=new THREE.TextureLoader();
-    			var Texture = loader.load("info.jpg"); 
-				// const geometry = new THREE.PlaneGeometry( width = 0.75,height=0.5);
-
-				function onSelect() {
-
-					if ( reticle.visible ) {
-
-						// const material = new THREE.MeshPhongMaterial( { color: 0xffffff * Math.random() } );
-						var material = new THREE.MeshBasicMaterial({map:Texture}); 
-						const mesh = new THREE.Mesh( geometry, material );
-						mesh.position.setFromMatrixPosition( reticle.matrix );
-						// mesh.scale.y = Math.random() * 2 + 1;
-						scene.add( mesh );
-
-					}
-
-				}
-
-				controller = renderer.xr.getController( 0 );
-				controller.addEventListener( 'select', onSelect );
-				scene.add( controller );
-
-				reticle = new THREE.Mesh(
-					new THREE.RingGeometry( 0.15, 0.2, 32 ).rotateX( - Math.PI / 2 ),
-					new THREE.MeshBasicMaterial()
-				);
-				reticle.matrixAutoUpdate = false;
-				reticle.visible = false;
-				scene.add( reticle );
-
-				//
-
-				window.addEventListener( 'resize', onWindowResize );
-
-			}
-
-			function onWindowResize() {
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize( window.innerWidth, window.innerHeight );
-
-			}
-
-			//
-
-			function animate() {
-
-				renderer.setAnimationLoop( render );
-
-			}
-
-			function render( timestamp, frame ) {
-
-				if ( frame ) {
-
-					const referenceSpace = renderer.xr.getReferenceSpace();
-					const session = renderer.xr.getSession();
-
-					if ( hitTestSourceRequested === false ) {
-
-						session.requestReferenceSpace( 'viewer' ).then( function ( referenceSpace ) {
-
-							session.requestHitTestSource( { space: referenceSpace } ).then( function ( source ) {
-
-								hitTestSource = source;
-
-							} );
-
-						} );
-
-						session.addEventListener( 'end', function () {
-
-							hitTestSourceRequested = false;
-							hitTestSource = null;
-
-						} );
-
-						hitTestSourceRequested = true;
-
-					}
-
-					if ( hitTestSource ) {
-
-						const hitTestResults = frame.getHitTestResults( hitTestSource );
-
-						if ( hitTestResults.length ) {
-
-							const hit = hitTestResults[ 0 ];
-
-							reticle.visible = true;
-							reticle.matrix.fromArray( hit.getPose( referenceSpace ).transform.matrix );
-
-						} else {
-
-							reticle.visible = false;
-
-						}
-
-					}
-
-				}
-
-				renderer.render( scene, camera );
-
-			}
-
-		</script>
-	</body>
+</body>
 </html>

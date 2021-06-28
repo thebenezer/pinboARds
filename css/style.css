@@ -146,7 +146,52 @@ header{
     height: 60px;
 }
 
+/* ************************ demoPage **************************** */
 
+.demo h1{
+    font-weight:300;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: 50px 0 60px 0;
+}
+.democards{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.card{
+    color: black;
+    width: 220px;
+    height: 300px;
+    /* border: 2px solid #f6f6f6; */
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin: 25px;
+    transition: all 0.5s ease;
+}
+
+.card:hover{
+    transform: scale(110%);
+    background-color: black;
+    color: #f6f6f6;
+}
+.card-img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.card h3{
+    font-weight:100;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 30px;
+}
+.card p{
+    text-align: left;
+    margin: 10px;
+}
 @media screen and (max-width: 768px){
 
     .header_content h1{
@@ -163,5 +208,6 @@ header{
     .signup-now .tools img{
         height: 20px
     }
-    
+    /* *************Demo*************** */
+
 }
