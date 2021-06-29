@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pinboARds</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
 </head>
 <body>
+    <div class="navbar"> 
+        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
+        <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./demo.html">Demo</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#" class="cta">Signup</a></li>
+            </ul>
+        </nav>
+        
+    </div>
     <section class="header_section">
         <header>
-            <div class="navbar"> 
-                <img class="logo" src="./assets/logo.svg" alt="logo">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Demo</a></li>
-                        <li><a href="#">Login</a></li>
-                        <!-- <li><a href="#" class="cta">Login</a></li> -->
-                    </ul>
-                </nav>
-                <a href="#" class="cta">Signup</a>
-            </div>
+            
             <div class="header_content">
                 <h1>A platform to create, use and share virtual pinboards</h1>
                 <div class="graphic">
-                    <img src="./assets/pic2.svg" alt="" srcset="">
+                    <img src="./assets/p0.svg" alt="" srcset="">
                 </div><br><br><br><br>
-                <a class="cta" href="demo.html">Try Now</a>
+                <a class="cta" href="./demo.html">Try Now</a>
 
             </div>
         </header>
@@ -42,16 +49,16 @@
                 <p>All you need is a smartphone and web browser! All you have to do is visit a URL.</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/pic3.svg" alt="">
+                <img src="./assets/p1.svg" alt="">
             </div>
         </div>
         <div class="intro alt">
             <div class="intro-info">
                 <h3>Create, Modify, Share</h3>
-                <p>Once a PinboARd is created, you can view it using augmented reality. Share any pinboard by making it public, and anyone with the URL link will automatically be able to view the content.</p>
+                <p>Once a PinboARd is created, you can view it using AR. Share any pinboard by making it public.</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/pic4.svg" alt="">
+                <img src="./assets/p2.svg" alt="">
             </div>
         </div>
         <div class="intro">
@@ -60,7 +67,7 @@
                 <p>Want to collaborate on a single pinboard? Just create a pinboard and provide edit access to anyone you would like to collaborate with!</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/pic3.svg" alt="">
+                <img src="./assets/p3.svg" alt="">
             </div>
         </div>
     </section>
@@ -78,17 +85,17 @@
     <section class="signup-now">
         <h2>Built With</h2>
         
-        <div class="tools">
+        <div class="tools" style="margin-bottom: 200px;">
             <img src="./assets/three.svg" alt="">
             <img src="./assets/Ar_core.svg" alt="">
             <img src="./assets/WebGL_Logo.svg" alt="">
         </div>
-        <h2>Runs On</h2>
+        <!-- <h2>Runs On</h2>
         <div class="tools" style="margin-bottom: 200px;">
             <img src="./assets/Google_Chrome.svg" alt="">
             <img src="./assets/1920px-Brave_icon_app.png" alt="">
             <img src="./assets/Firefox_logo,_2019.svg" alt="">
-        </div>
+        </div> -->
 
     </section>
 
@@ -96,25 +103,27 @@
         <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
         <div class="footer-links">
             <ul>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Privacy</li>
-                <li>Terms</li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./privacy.html">Privacy</a></li>
+                <li><a href="./terms.html">Terms</a></li>
             </ul>
             <ul>
-                <li>Collaborate</li>
-                <li>Bug Report</li>
-                <li>Contribute</li>
-                <li>Reviews</li>
+                <li><a href="https://github.com/">Collaborate</a></li>
+                <li><a href="./bugreport.html">Bug Report</a></li>
+                <li><a href="./contribute.html">Contribute</a></li>
+                <li><a href="./reviews.html">Reviews</a></li>
             </ul>
         </div>
         <div class="icons">
-            <a href="#"><img class="icon" src="./assets/github.svg" alt=""></a>
+            <a href="https://github.com/"><img class="icon" src="./assets/github.svg" alt=""></a>
             <a href="#"><img class="icon" src="./assets/instagram.svg" alt=""></a>
             <a href="#"><img class="icon" src="./assets/gmail.svg" alt=""></a>
           </div>
         <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
     </footer>
+
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
