@@ -6,28 +6,65 @@
     <title>pinboARds</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/basic.css">
+    <style>
+        .loginwindow,.signupwindow{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    /* opacity: 0; */
+    background-color: #ffffffb9;
+    transition: all 0.5s;
+    text-align: center;
+    display: none;
+    justify-content: center;
+}
+
+/* Add styles to the form container */
+.ls-form {
+    margin: auto;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.ls-form p{
+    font-size: 14px;
+}
+
+.close-form{
+    position: relative;
+    left: 93%;
+    cursor: pointer;
+}
+.close-l1,.close-l2{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0 5px 0;
+    transition: all 0.5s ease;
+}
+.close-l1{
+    transform: rotateZ(-45deg);
+}
+.close-l2{
+    transform: rotateZ(45deg);
+    /* width: 15px; */
+    /* transform: translateX(10px); */
+}
+
+    </style>
 </head>
 <body>
-    <div class="navbar"> 
-        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
-        <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-        </div>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./demo.html">Demo</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="cta">Signup</a></li>
-            </ul>
-        </nav>
-        
-    </div>
+    <?php include("header.php")?>
     <section class="header_section">
         <header>
-            
             <div class="header_content">
                 <h1>A platform to create, use and share virtual pinboards</h1>
                 <div class="graphic">
@@ -99,31 +136,8 @@
 
     </section>
 
-    <footer>
-        <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
-        <div class="footer-links">
-            <ul>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./privacy.html">Privacy</a></li>
-                <li><a href="./terms.html">Terms</a></li>
-            </ul>
-            <ul>
-                <li><a href="https://github.com/">Collaborate</a></li>
-                <li><a href="./bugreport.html">Bug Report</a></li>
-                <li><a href="./contribute.html">Contribute</a></li>
-                <li><a href="./reviews.html">Reviews</a></li>
-            </ul>
-        </div>
-        <div class="icons">
-            <a href="https://github.com/"><img class="icon" src="./assets/github.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/instagram.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/gmail.svg" alt=""></a>
-          </div>
-        <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
-    </footer>
-
-    <script src="./js/menu.js"></script>
+    <?php include("footer.html")?>
+    
 
 </body>
 </html>

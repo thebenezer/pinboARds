@@ -34,6 +34,22 @@ hamburger.addEventListener('click',()=>{
     // login.classList.toggle('fade');
 });
 
+const loginForm=document.querySelector(".loginwindow");
+const signupForm=document.querySelector(".signupwindow");
+
+function openLoginForm() {
+    signupForm.style.display = "none";
+    loginForm.style.display = "flex";
+}
+function openSignupForm() {
+    signupForm.style.display = "flex";
+}
+    
+function closeForm() {
+    loginForm.style.display = "none";
+    signupForm.style.display = "none";
+}
+
 
 //..........SCROLL BUTTONS..........
 
