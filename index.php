@@ -6,60 +6,6 @@
     <title>pinboARds</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/basic.css">
-    <style>
-        .loginwindow,.signupwindow{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    /* opacity: 0; */
-    background-color: #ffffffb9;
-    transition: all 0.5s;
-    text-align: center;
-    display: none;
-    justify-content: center;
-}
-
-/* Add styles to the form container */
-.ls-form {
-    margin: auto;
-    max-width: 300px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: white;
-}
-
-.ls-form p{
-    font-size: 14px;
-}
-
-.close-form{
-    position: relative;
-    left: 93%;
-    cursor: pointer;
-}
-.close-l1,.close-l2{
-    display: block;
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    margin: 5px 0 5px 0;
-    transition: all 0.5s ease;
-}
-.close-l1{
-    transform: rotateZ(-45deg);
-}
-.close-l2{
-    transform: rotateZ(45deg);
-    /* width: 15px; */
-    /* transform: translateX(10px); */
-}
-
-    </style>
 </head>
 <body>
     <?php include("header.php")?>

@@ -3,7 +3,7 @@
 $servername="localhost";
 $dbUsername="root";
 $dbPassword="";
-$dbName="pinboard";
+$dbName="pinboards";
 
 $conn= mysqli_connect($servername,$dbUsername,$dbPassword,$dbName);
 

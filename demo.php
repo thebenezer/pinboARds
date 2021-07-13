@@ -8,23 +8,8 @@
     <link rel="stylesheet" href="./css/basic.css">
 </head>
 <body>
-    <div class="navbar"> 
-        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
-        <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-        </div>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./demo.html">Demo</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="cta">Signup</a></li>
-            </ul>
-        </nav>
-        
-    </div>
+    <?php include("header.php")?>
+
     <section class="header_section">
         <header class="demo">
           <h1>Try these demos</h1>
@@ -59,31 +44,8 @@
 
     </section>
 
-    <footer>
-        <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
-        <div class="footer-links">
-            <ul>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./privacy.html">Privacy</a></li>
-                <li><a href="./terms.html">Terms</a></li>
-            </ul>
-            <ul>
-                <li><a href="https://github.com/">Collaborate</a></li>
-                <li><a href="./bugreport.html">Bug Report</a></li>
-                <li><a href="./contribute.html">Contribute</a></li>
-                <li><a href="./reviews.html">Reviews</a></li>
-            </ul>
-        </div>
-        <div class="icons">
-            <a href="https://github.com/"><img class="icon" src="./assets/github.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/instagram.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/gmail.svg" alt=""></a>
-          </div>
-        <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
-    </footer>
+        <?php include("footer.html")?>
 
-    <script src="./js/menu.js"></script>
 
 </body>
 </html>
