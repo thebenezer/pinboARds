@@ -48,12 +48,23 @@
         }
 
         ?>
-
+        <div class="create-pinboard">
+            <ul class="create_list">
+                <a href="#">Text Board</a>
+                <a href="#">Scribble Pad</a>
+                <a href="#">Image Board</a>
+            </ul>
+            <div class="plus-cont" onclick="openCreateLinks()">
+                <div class="plus"></div>
+            </div>
+            
+        </div>
+    
     <section class="header_section">
         <header>
             <h1 class="profile-head">Profile</h1>
             <article class="profile">
-                
+            
                 <div class="profile-card">
                     <!-- <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt=""> -->
                     <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div>
@@ -80,6 +91,9 @@
                         <div class="actions">
                             <a><img src="./assets/siteImages/images/paper-plane.svg" alt=""></a>
                         </div>
+                    </div> -->
+                    <!-- <div class="create-pinboard2" onclick="openLoginForm()">
+                        <div class="plus"></div>
                     </div> -->
                 </div>
             </article>
@@ -116,6 +130,6 @@
 
         <?php include("footer.html")?>
 
-
+        <script src="./js/scroll.js"></script>
 </body>
 </html>

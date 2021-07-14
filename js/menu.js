@@ -34,6 +34,7 @@ hamburger.addEventListener('click',()=>{
     // login.classList.toggle('fade');
 });
 
+//..........LOGIN & SIGNUP POPUP..........
 const loginForm=document.querySelector(".loginwindow");
 const signupForm=document.querySelector(".signupwindow");
 
@@ -51,7 +52,39 @@ function closeForm() {
 }
 
 
-//..........SCROLL BUTTONS..........
+//..........CREATE PINBOARD LINKS..........
+const plus_button= document.querySelector('.plus-cont');
+const create_list= document.querySelector('.create_list');
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+
+    if (window.pageYOffset > 40) { // make mobile nav opaque
+      // logo.classList.add('small');
+      navbar.classList.add('highlight');
+    }
+    else { // 
+      // logo.classList.remove('small');
+      navbar.classList.remove('highlight');
+    }
+
+    if (window.pageYOffset > 200) { // Show plus
+        plus_button.classList.add('fade');
+        // plus_button.style.display = "block";
+    }
+    // else { // Hide plus_button
+    //     plus_button.classList.remove('fade');
+    //     // scrollToTop.style.display = "none";
+    // }
+}
+
+function openCreateLinks() {
+  create_list.classList.toggle('open');
+  plus_button.classList.toggle('open');
+}
+
+//..........SCROLL ..........
 
 // const more= document.querySelector('.more');
 
