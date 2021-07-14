@@ -18,7 +18,7 @@ body{
     position: absolute;
     top: 0%;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     display:flex;
     justify-content: flex-end;
     align-items: center;
@@ -30,7 +30,7 @@ body{
     text-decoration: none;
 }
 .logo{
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
     margin-right: auto;
 }
@@ -105,7 +105,7 @@ width: 100%;
 
 .loginwindow,.signupwindow{
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 100%;
     top: 0%;
@@ -309,7 +309,7 @@ footer p{
     .hamburger{
         position: absolute;    
         /* left: 0%; */
-        z-index: 2;
+        z-index: 4;
         cursor: pointer;
         text-align: left;
         display: unset;
@@ -360,15 +360,21 @@ footer p{
     /* ***************** NAV *********************** */
     .navbar{
         position: fixed;
-    }
 
+    }
+    .navbar.highlight{
+        /* background: linear-gradient(0deg,#ffffff44,#6e6e6ee3); */
+        background: linear-gradient(150deg,#33086796,#31a6bb9f);
+        /* background: #adf3ff65; */
+        transition: all 0.5s ease;
+    }
     .nav{
         display: none;
     }
     
     .nav.open{
         position:fixed;
-        z-index: 1;
+        z-index: 3;
         top: 0%;
         left: 0%;
         display: flex;
@@ -382,7 +388,7 @@ footer p{
     .nav-links.open{
         width: 100%;
         position: fixed;
-        z-index: 1;
+        z-index: 3;
         top: 10%;
         /* left: 0%; */
         display: flex;
