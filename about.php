@@ -14,14 +14,14 @@
         <header>
             
             <div class="header_content">
-                <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
+                <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/siteImages/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
                     is a platform to create, use and share virtual pinboards.
                     We use web based Augmented Reality to enable the creation of and
                     interaction with Virtual Pinboards. This project runs on any android that supports
                     ARcore and the webGL standard.
                 </h1>
                 <div class="graphic">
-                    <img src="./assets/Android_robot.svg" alt="android_logo" style="height: 60px;">
+                    <img src="./assets/siteImages/Android_robot.svg" alt="android_logo" style="height: 60px;">
                 </div><br><br><br><br>
                 <a class="cta" href="./demo.html">Try Now</a>
 
@@ -35,15 +35,15 @@
         <h2>Built With</h2>
         
         <div class="tools" style="margin-bottom: 50px;">
-            <img src="./assets/three.svg" alt="">
-            <img src="./assets/Ar_core.svg" alt="">
-            <img src="./assets/WebGL_Logo.svg" alt="">
+            <img src="./assets/siteImages/three.svg" alt="">
+            <img src="./assets/siteImages/Ar_core.svg" alt="">
+            <img src="./assets/siteImages/WebGL_Logo.svg" alt="">
         </div>
         <h2>Runs On</h2>
         <div class="tools" style="margin-bottom: 200px;">
-            <img src="./assets/Google_Chrome.svg" alt="">
-            <img src="./assets/1920px-Brave_icon_app.png" alt="">
-            <img src="./assets/Firefox_logo,_2019.svg" alt="">
+            <img src="./assets/siteImages/Google_Chrome.svg" alt="">
+            <img src="./assets/siteImages/1920px-Brave_icon_app.png" alt="">
+            <img src="./assets/siteImages/Firefox_logo,_2019.svg" alt="">
         </div>
     </section>
 

@@ -170,7 +170,7 @@ var Refractor = function ( geometry, options ) {
 	} )();
 
 	// This will update the texture matrix that is used for projective texture mapping in the shader.
-	// see: http://developer.download.nvidia.com/assets/gamedev/docs/projective_texture_mapping.pdf
+	// see: http://developer.download.nvidia.com/assets/siteImages/gamedev/docs/projective_texture_mapping.pdf
 
 	function updateTextureMatrix( camera ) {
 

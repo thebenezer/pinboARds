@@ -7,88 +7,6 @@
     <title>pinboARds</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/basic.css">
-    <style>
-        /* CARD DESIGN */
-.profile{
-    width: 80%;
-    display: flex;
-    margin: auto;
-}
-.profile-card {
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0px 10px 40px rgba(34, 35, 58, 0.5);
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    border-radius: 25px;
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-}
-
-.profile_pic {
-    flex: 1;
-    /* width: 100%; */
-    /* height: 100%; */
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    /* background-position: bottom center; */
-    background-size: cover;
-}
-
-.card_info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: left;
-    /* grid-template-columns: 1fr 2fr; */
-}
-
-.uid {
-    padding: 1rem;
-    text-align: right;
-    color: green;
-    font-weight: bold;
-    font-size: 16px;
-}
-.name{
-    color: black;
-    padding: 0.5rem 1rem 0 1rem;
-    text-align: left;
-    margin-top: 10px;
-}
-.desc {
-    padding: 0 1rem;
-    font-size: 12px;
-    /* margin: 0; */
-}
-   
-.actions {
-    /* text-align: left; */
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 20px;
-}
-.actions a img {
-    margin: 0 20px;
-    width: 30px;
-    border: none;
-}
-
-.actions a {
-    border: none;
-    background: none;
-    font-size: 24px;
-    cursor: pointer;
-    transition:.2s;
-}
-.actions a:hover{
-    opacity: 0.6;
-}
-    </style>
 </head>
 <body>
     <?php 
@@ -133,19 +51,36 @@
 
     <section class="header_section">
         <header>
+            <h1 class="profile-head">Profile</h1>
             <article class="profile">
+                
                 <div class="profile-card">
-                    <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt="">
-                    <div class="profile_pic" style="background-image: url('./assets/profile_pics/<?php echo $backpic;?>');"></div>
-                    <img class="globe_link" src="./assets/profile_pics/<?php echo $profilepic;?>">
-                    <div class="card_info">
+                    <!-- <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt=""> -->
+                    <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div>
+                    <!-- <div class="profile_pic" style="background-image: url('./assets/siteImages/profile_pics/<?php// echo $backpic;?>');"></div> -->
+                    <!-- <img class="globe_link" src="./assets/siteImages/profile_pics/<?php //echo $profilepic;?>"> -->
+                    <div class="profile_info">
                         <div class="uid"><?php echo $uid;?></div>
                         <h2 class="name"><?php echo $name;?></h2>
                         <div class="desc"><?php echo $about;?></div>
                         <div class="actions">
-                            <a href="editprofile.php"><img src="./assets/images/edit.svg" alt=""></a>
+                            <a href="editprofile.php"><img src="./assets/siteImages/edit.svg" alt=""></a>
+                            <!-- <button><img src="./assets/siteImages/images/friends.svg" alt=""></button> -->
+                            <!-- <button><img src="./assets/siteImages/images/paper-plane.svg" alt=""></button> -->
                         </div>
                     </div>
+                </div>
+                <div class="info-card">
+                    <!-- <div class="badge" >
+                        <img class="badge_pic" src="./assets/siteImages/badges/fledgling.jpg" alt="">
+                        <canvas class="badge_pic" id="c"></canvs>
+                    </div>
+                    <div class="card_info">
+                        
+                        <div class="actions">
+                            <a><img src="./assets/siteImages/images/paper-plane.svg" alt=""></a>
+                        </div>
+                    </div> -->
                 </div>
             </article>
         </header>
@@ -153,20 +88,30 @@
     
     
 
-    <section class="signup-now">
-        <h2>Built With</h2>
-        
-        <div class="tools" style="margin-bottom: 50px;">
-            <img src="./assets/three.svg" alt="">
-            <img src="./assets/Ar_core.svg" alt="">
-            <img src="./assets/WebGL_Logo.svg" alt="">
-        </div>
-        <h2>Runs On</h2>
-        <div class="tools" style="margin-bottom: 200px;">
-            <img src="./assets/Google_Chrome.svg" alt="">
-            <img src="./assets/1920px-Brave_icon_app.png" alt="">
-            <img src="./assets/Firefox_logo,_2019.svg" alt="">
-        </div>
+    <section class="pinboards-section">
+        <h2>My Pinboards</h2>
+        <div class="democards">
+            <a href="./demo/d1.html" class="card">
+              <img src="./assets/siteImages/temp1.jpg" alt="" class="card-img">
+              <h3>Shopping List</h3>
+              <p>Create a shopping list and view it in AR</p>
+            </a>
+            <a href="./demo/d2.html" class="card">
+              <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
+              <h3>Notice Board</h3>
+              <p>Explore the contents of a sample notice board</p>
+            </a>
+            <a href="./demo/d3.html" class="card">
+              <img src="./assets/siteImages/temp3.jpg" alt="" class="card-img">
+              <h3>Scribble Board</h3>
+              <p>Make a pinboard with hand written/drawn content </p>
+            </a> 
+            <a href="./demo/d2.html" class="card">
+              <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
+              <h3>Notice Board</h3>
+              <p>Explore the contents of a sample notice board</p>
+            </a> 
+          <div>
     </section>
 
         <?php include("footer.html")?>

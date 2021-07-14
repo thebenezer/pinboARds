@@ -2,7 +2,7 @@
   session_start();
  ?>
 <div class="navbar"> 
-    <a class="logo" href="index.php"><img src="./assets/logo.svg" alt="logo"></a>
+    <a class="logo" href="index.php"><img src="./assets/siteImages/logo.svg" alt="logo"></a>
     <div class="hamburger">
             <div class="line1"></div>
             <div class="line2"></div>

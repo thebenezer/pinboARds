@@ -14,10 +14,9 @@
             <div class="header_content">
                 <h1>A platform to create, use and share virtual pinboards</h1>
                 <div class="graphic">
-                    <img src="./assets/p0.svg" alt="" srcset="">
+                    <img src="./assets/siteImages/p0.svg" alt="" srcset="">
                 </div><br><br><br><br>
                 <a class="cta" href="./demo.html">Try Now</a>
-
             </div>
         </header>
     </section>
@@ -32,7 +31,7 @@
                 <p>All you need is a smartphone and web browser! All you have to do is visit a URL.</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/p1.svg" alt="">
+                <img src="./assets/siteImages/p1.svg" alt="">
             </div>
         </div>
         <div class="intro alt">
@@ -41,7 +40,7 @@
                 <p>Once a PinboARd is created, you can view it using AR. Share any pinboard by making it public.</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/p2.svg" alt="">
+                <img src="./assets/siteImages/p2.svg" alt="">
             </div>
         </div>
         <div class="intro">
@@ -50,7 +49,7 @@
                 <p>Want to collaborate on a single pinboard? Just create a pinboard and provide edit access to anyone you would like to collaborate with!</p>
             </div>
             <div class="info-graphic">
-                <img src="./assets/p3.svg" alt="">
+                <img src="./assets/siteImages/p3.svg" alt="">
             </div>
         </div>
     </section>
@@ -69,15 +68,15 @@
         <h2>Built With</h2>
         
         <div class="tools" style="margin-bottom: 200px;">
-            <img src="./assets/three.svg" alt="">
-            <img src="./assets/Ar_core.svg" alt="">
-            <img src="./assets/WebGL_Logo.svg" alt="">
+            <img src="./assets/siteImages/three.svg" alt="">
+            <img src="./assets/siteImages/Ar_core.svg" alt="">
+            <img src="./assets/siteImages/WebGL_Logo.svg" alt="">
         </div>
         <!-- <h2>Runs On</h2>
         <div class="tools" style="margin-bottom: 200px;">
-            <img src="./assets/Google_Chrome.svg" alt="">
-            <img src="./assets/1920px-Brave_icon_app.png" alt="">
-            <img src="./assets/Firefox_logo,_2019.svg" alt="">
+            <img src="./assets/siteImages/Google_Chrome.svg" alt="">
+            <img src="./assets/siteImages/1920px-Brave_icon_app.png" alt="">
+            <img src="./assets/siteImages/Firefox_logo,_2019.svg" alt="">
         </div> -->
 
     </section>

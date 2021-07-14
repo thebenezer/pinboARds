@@ -15,17 +15,17 @@
           <h1>Try these demos</h1>
           <div class="democards">
             <a href="./demo/d1.html" class="card">
-              <img src="./assets/temp1.jpg" alt="" class="card-img">
+              <img src="./assets/siteImages/temp1.jpg" alt="" class="card-img">
               <h3>Shopping List</h3>
               <p>Create a shopping list and view it in AR</p>
             </a>
             <a href="./demo/d2.html" class="card">
-              <img src="./assets/temp2.jpg" alt="" class="card-img">
+              <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
               <h3>Notice Board</h3>
               <p>Explore the contents of a sample notice board</p>
             </a>
             <a href="./demo/d3.html" class="card">
-              <img src="./assets/temp3.jpg" alt="" class="card-img">
+              <img src="./assets/siteImages/temp3.jpg" alt="" class="card-img">
               <h3>Scribble Board</h3>
               <p>Make a pinboard with hand written/drawn content </p>
             </a>  
