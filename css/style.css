@@ -162,14 +162,14 @@ header{
     margin: auto;
     flex-wrap: wrap;
 }
+
 .card{
     color: black;
     width: 220px;
     height: 300px;
-    /* border: 2px solid #f6f6f6; */
     background-color: #f6f6f6;
     border-radius: 10px;
-    margin: 25px;
+    margin: 25px auto;
     transition: all 0.5s ease;
 }
 
@@ -192,6 +192,84 @@ header{
     text-align: left;
     margin: 10px;
 }
+
+/* ************************ PROFILE PAGE **************************** */
+.profile-head{
+    font-weight:300;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: 50px 0 60px 0;
+}
+.profile{
+    margin: 0px auto 0 auto;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.profile-card,.info-card{
+    color: black;
+    width: 80%;
+    min-width: 270px;
+    max-width: 400px;
+    flex: 1;
+    height: 300px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin: 25px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+}
+.profile_pic{
+    flex: 1;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.profile_info{
+    flex: 1;
+    text-align: left;
+}
+.actions {
+    /* text-align: left; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.actions a img {
+    margin: 0 20px;
+    width: 30px;
+    border: none;
+}
+
+.actions a {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition:.2s;
+}
+.actions a:hover{
+    opacity: 0.6;
+}
+/* ************************ PROFILE PAGE **************************** */
+/* ************************ Pinboards section **************************** */
+.pinboards-section{
+    width: 100%;
+    /* height: 40vh; */
+    margin-bottom: 100px;
+}
+.pinboards-section h2{
+    font-weight:200;
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: 40px 0 70px 0;
+}
+
 @media screen and (max-width: 768px){
 
     .header_content h1{
@@ -208,6 +286,13 @@ header{
     .signup-now .tools img{
         height: 20px
     }
-    /* *************Demo*************** */
+    /* *************PROFILE PAGE*************** */
+    .profile{
+        width: 90%;
+    }
+    .profile-card,.info-card{
 
+        margin: 25px 10px;
+
+    }
 }
