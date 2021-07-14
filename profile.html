@@ -1,0 +1,189 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinboARds</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
+</head>
+<body>
+    <div class="navbar"> 
+    <a class="logo" href="index.php"><img src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+    </div>
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./demo.php">Demo</a></li>
+                            <li><a href="./includes/logout.inc.php">Logout</a></li>
+                <li><a class="cta" href="profile.php">Profile</a></li>
+                        <!-- <li><a href="#" onclick="openLoginForm()">Login</a></li>
+            <li><a href="#" class="cta" onclick="openSignupForm()">Signup</a></li> -->
+        </ul>
+    </nav>
+    
+</div>
+
+
+<!-- ****************** LOGIN FORM ******************* -->
+
+<div class="loginwindow">
+    <form method="POST" action="./includes/login.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Login</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid" required />
+            <div class="ls-label-text">Username/Email</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="login-submit">Login</button>
+        <p>New to SURF? <a style="color:blue;cursor:pointer;" onclick="openSignupForm()">Sign-up</a></p>
+        
+    </form>
+    </div>
+</div>
+
+<!-- ****************** SIGNUP FORM ******************* -->
+
+<div class="signupwindow">
+    <form method="POST" action="includes/signup.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Signup</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid"required />
+            <div class="ls-label-text">Username</div>
+        </label>
+        <label class="ls-label">
+            <input type="email" name="email" required />
+            <div class="ls-label-text">E-mail</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="conf_pwd" required />
+            <div class="ls-label-text">Confirm Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="signup-submit">Sign-up</button>    
+        <p>Have an account already? <a style="color:blue;cursor:pointer;" onclick="openLoginForm()">Login</a></p>
+        
+    </form>
+    </div>
+</div>
+    <section class="header_section">
+        <header>
+            <h1 class="profile-head">Profile</h1>
+            <article class="profile">
+                
+                <div class="profile-card">
+                    <!-- <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt=""> -->
+                    <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div>
+                    <!-- <div class="profile_pic" style="background-image: url('./assets/siteImages/profile_pics/<br />
+<b>Warning</b>:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in <b>/opt/lampp/htdocs/pinboARds/profile.php</b> on line <b>60</b><br />
+');"></div> -->
+                    <!-- <img class="globe_link" src="./assets/siteImages/profile_pics/"> -->
+                    <div class="profile_info">
+                        <div class="uid">bob</div>
+                        <h2 class="name">bob</h2>
+                        <div class="desc">Avid traveller.</div>
+                        <div class="actions">
+                            <a href="editprofile.php"><img src="./assets/siteImages/edit.svg" alt=""></a>
+                            <!-- <button><img src="./assets/siteImages/images/friends.svg" alt=""></button> -->
+                            <!-- <button><img src="./assets/siteImages/images/paper-plane.svg" alt=""></button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <!-- <div class="badge" >
+                        <img class="badge_pic" src="./assets/siteImages/badges/fledgling.jpg" alt="">
+                        <canvas class="badge_pic" id="c"></canvs>
+                    </div>
+                    <div class="card_info">
+                        
+                        <div class="actions">
+                            <a><img src="./assets/siteImages/images/paper-plane.svg" alt=""></a>
+                        </div>
+                    </div> -->
+                </div>
+            </article>
+        </header>
+    </section>
+    
+    
+
+    <section class="pinboards-section">
+        <h2>My Pinboards</h2>
+        <div class="democards">
+            <a href="./demo/d1.html" class="card">
+              <img src="./assets/siteImages/temp1.jpg" alt="" class="card-img">
+              <h3>Shopping List</h3>
+              <p>Create a shopping list and view it in AR</p>
+            </a>
+            <a href="./demo/d2.html" class="card">
+              <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
+              <h3>Notice Board</h3>
+              <p>Explore the contents of a sample notice board</p>
+            </a>
+            <a href="./demo/d3.html" class="card">
+              <img src="./assets/siteImages/temp3.jpg" alt="" class="card-img">
+              <h3>Scribble Board</h3>
+              <p>Make a pinboard with hand written/drawn content </p>
+            </a> 
+            <a href="./demo/d2.html" class="card">
+              <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
+              <h3>Notice Board</h3>
+              <p>Explore the contents of a sample notice board</p>
+            </a> 
+          <div>
+    </section>
+
+        <footer>
+    <a class="logolink"href="index.php"><img class="logo" src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="footer-links">
+        <ul>
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./contact.php">Contact</a></li>
+            <li><a href="./privacy.php">Privacy</a></li>
+            <li><a href="./terms.php">Terms</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://github.com/">Collaborate</a></li>
+            <li><a href="./bugreport.php">Bug Report</a></li>
+            <li><a href="./contribute.php">Contribute</a></li>
+            <li><a href="./reviews.php">Reviews</a></li>
+        </ul>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/"><img class="icon" src="./assets/siteImages/github.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/instagram.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/gmail.svg" alt=""></a>
+      </div>
+    <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
+</footer>
+
+<script src="./js/menu.js"></script>
+
+</body>
+</html>
