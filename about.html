@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,34 +10,99 @@
 </head>
 <body>
     <div class="navbar"> 
-        <a class="logo" href="index.html"><img src="./assets/logo.svg" alt="logo"></a>
-        <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-        </div>
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Demo</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="cta">Signup</a></li>
-            </ul>
-        </nav>
-        
+    <a class="logo" href="index.php"><img src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
     </div>
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./demo.php">Demo</a></li>
+                            <li><a href="#" onclick="openLoginForm()">Login</a></li>
+                <li><a href="#" class="cta" onclick="openSignupForm()">Signup</a></li>
+                        <!-- <li><a href="#" onclick="openLoginForm()">Login</a></li>
+            <li><a href="#" class="cta" onclick="openSignupForm()">Signup</a></li> -->
+        </ul>
+    </nav>
+    
+</div>
+
+
+<!-- ****************** LOGIN FORM ******************* -->
+
+<div class="loginwindow">
+    <form method="POST" action="./includes/login.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Login</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid" required />
+            <div class="ls-label-text">Username/Email</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="login-submit">Login</button>
+        <p>New to SURF? <a style="color:blue;cursor:pointer;" onclick="openSignupForm()">Sign-up</a></p>
+        
+    </form>
+    </div>
+</div>
+
+<!-- ****************** SIGNUP FORM ******************* -->
+
+<div class="signupwindow">
+    <form method="POST" action="includes/signup.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Signup</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid"required />
+            <div class="ls-label-text">Username</div>
+        </label>
+        <label class="ls-label">
+            <input type="email" name="email" required />
+            <div class="ls-label-text">E-mail</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="conf_pwd" required />
+            <div class="ls-label-text">Confirm Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="signup-submit">Sign-up</button>    
+        <p>Have an account already? <a style="color:blue;cursor:pointer;" onclick="openLoginForm()">Login</a></p>
+        
+    </form>
+    </div>
+</div>
     <section class="header_section">
         <header>
             
             <div class="header_content">
-                <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
+                <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/siteImages/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
                     is a platform to create, use and share virtual pinboards.
                     We use web based Augmented Reality to enable the creation of and
                     interaction with Virtual Pinboards. This project runs on any android that supports
                     ARcore and the webGL standard.
                 </h1>
                 <div class="graphic">
-                    <img src="./assets/Android_robot.svg" alt="android_logo" style="height: 60px;">
+                    <img src="./assets/siteImages/Android_robot.svg" alt="android_logo" style="height: 60px;">
                 </div><br><br><br><br>
                 <a class="cta" href="./demo.html">Try Now</a>
 
@@ -50,43 +116,43 @@
         <h2>Built With</h2>
         
         <div class="tools" style="margin-bottom: 50px;">
-            <img src="./assets/three.svg" alt="">
-            <img src="./assets/Ar_core.svg" alt="">
-            <img src="./assets/WebGL_Logo.svg" alt="">
+            <img src="./assets/siteImages/three.svg" alt="">
+            <img src="./assets/siteImages/Ar_core.svg" alt="">
+            <img src="./assets/siteImages/WebGL_Logo.svg" alt="">
         </div>
         <h2>Runs On</h2>
         <div class="tools" style="margin-bottom: 200px;">
-            <img src="./assets/Google_Chrome.svg" alt="">
-            <img src="./assets/1920px-Brave_icon_app.png" alt="">
-            <img src="./assets/Firefox_logo,_2019.svg" alt="">
+            <img src="./assets/siteImages/Google_Chrome.svg" alt="">
+            <img src="./assets/siteImages/1920px-Brave_icon_app.png" alt="">
+            <img src="./assets/siteImages/Firefox_logo,_2019.svg" alt="">
         </div>
     </section>
 
-    <footer>
-        <a class="logolink"href="index.html"><img class="logo" src="./assets/logo.svg" alt="logo"></a>
-        <div class="footer-links">
-            <ul>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./privacy.html">Privacy</a></li>
-                <li><a href="./terms.html">Terms</a></li>
-            </ul>
-            <ul>
-                <li><a href="https://github.com/">Collaborate</a></li>
-                <li><a href="./bugreport.html">Bug Report</a></li>
-                <li><a href="./contribute.html">Contribute</a></li>
-                <li><a href="./reviews.html">Reviews</a></li>
-            </ul>
-        </div>
-        <div class="icons">
-            <a href="https://github.com/"><img class="icon" src="./assets/github.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/instagram.svg" alt=""></a>
-            <a href="#"><img class="icon" src="./assets/gmail.svg" alt=""></a>
-          </div>
-        <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
-    </footer>
+        <footer>
+    <a class="logolink"href="index.php"><img class="logo" src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="footer-links">
+        <ul>
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./contact.php">Contact</a></li>
+            <li><a href="./privacy.php">Privacy</a></li>
+            <li><a href="./terms.php">Terms</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://github.com/">Collaborate</a></li>
+            <li><a href="./bugreport.php">Bug Report</a></li>
+            <li><a href="./contribute.php">Contribute</a></li>
+            <li><a href="./reviews.php">Reviews</a></li>
+        </ul>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/"><img class="icon" src="./assets/siteImages/github.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/instagram.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/gmail.svg" alt=""></a>
+      </div>
+    <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
+</footer>
 
-    <script src="./js/menu.js"></script>
+<script src="./js/menu.js"></script>
 
 </body>
 </html>
