@@ -50,9 +50,9 @@
         ?>
         <div class="create-pinboard">
             <ul class="create_list">
-                <a href="#">Text Board</a>
-                <a href="#">Scribble Pad</a>
-                <a href="#">Image Board</a>
+                <a href="./create.php?val=text">Text Board</a>
+                <a href="./create.php?val=scribble">Scribble Pad</a>
+                <a href="./create.php?val=image">Image Board</a>
             </ul>
             <div class="plus-cont" onclick="openCreateLinks()">
                 <div class="plus"></div>
