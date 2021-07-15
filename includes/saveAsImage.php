@@ -8,6 +8,6 @@ $fileData = base64_decode($img);
 $fileName = date('Ymdhisa').'.png';
 $filePath = '../assets/saved_pins/'.$fileName;
 file_put_contents($filePath, $fileData);
-	echo('<hr>Created Image is: <br><img src=/pinboARds/assets/saved_pins/'.$fileName.'>');
+	echo('<img src=/pinboARds/assets/saved_pins/'.$fileName.'>');
 }
 ?>
