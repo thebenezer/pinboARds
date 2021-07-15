@@ -75,6 +75,10 @@ function Reset() {
     // drawingContext.fillStyle = '#FFFFFF';
     // drawingContext.fillRect( 0, 0, 128, 128 );
 }
+
+
+
+
 // function init() {
 
 //     container = document.createElement( 'div' );

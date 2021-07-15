@@ -15,6 +15,8 @@
             <br>
             <br>
             <br>
+            <h2>Scratch Pad</h2></span>
+
             <!-- <div class="header_content">
                 <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/siteImages/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
                     is a platform to create, use and share virtual pinboards.
@@ -32,14 +34,13 @@
     
 
     <section class="signup-now">
-            <h2>Scratch Pad</h2></span>
         <canvas id="drawing-canvas" height="128" width="128" style="border: 1px solid; background:white; ;margin: 0 auto;cursor:crosshair;"></canvas>
         <p>Input Here</p>
         <!-- <canvas id="canvas" style="border: 1px solid; margin: 0 auto;" height="200" width="800"></canvas> -->
         <br/>
         <!-- <p>Press the left mouse button and drag anywhere inside the black box above</p> -->
         <!-- <canvas id="drawing-canvas" height="128" width="128"></canvas> -->
-        <input type="button" onClick="saveImage();" value="Save">
+        <input type="button" onclick="saveImage()" value="Save">
         <button class="btn" id="resetButton">Reset</button>
         <div id="result"></div>
     </section>
@@ -48,6 +49,25 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/savecanvas.js" type="module"></script>
+    <script>
+        function saveImage(){
+            try{
+                var canvas = document.getElementById("drawing-canvas");
+                var data = canvas.toDataURL("image/png");
+                $.ajax({
+                    url: "includes/saveAsImage.php",
+                    data:{data:data},
+                    type:"POST",
+                    success:function(r){
+                        $("#result").html(r);
+                    }
+            
+                });
+            }catch(e){
+                alert(e.message);
+            }
+        }
+    </script>
 
 </body>
 </html>

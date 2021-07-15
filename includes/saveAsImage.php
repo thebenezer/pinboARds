@@ -6,7 +6,8 @@ $img = str_replace(' ', '+', $img);
 $fileData = base64_decode($img);
 //saving
 $fileName = date('Ymdhisa').'.png';
-file_put_contents($fileName, $fileData);
-	echo('<hr>Created Image is: <br><img src='.$fileName.'>');
+$filePath = '../assets/saved_pins/'.$fileName;
+file_put_contents($filePath, $fileData);
+	echo('<hr>Created Image is: <br><img src=/pinboARds/assets/saved_pins/'.$fileName.'>');
 }
 ?>
