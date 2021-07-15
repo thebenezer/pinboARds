@@ -1,0 +1,157 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pinboARds</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/basic.css">
+</head>
+<body>
+    <div class="navbar"> 
+    <a class="logo" href="index.php"><img src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+    </div>
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./demo.php">Demo</a></li>
+                            <li><a href="./includes/logout.inc.php">Logout</a></li>
+                <li><a class="cta" href="profile.php">Profile</a></li>
+                        <!-- <li><a href="#" onclick="openLoginForm()">Login</a></li>
+            <li><a href="#" class="cta" onclick="openSignupForm()">Signup</a></li> -->
+        </ul>
+    </nav>
+    
+</div>
+
+
+<!-- ****************** LOGIN FORM ******************* -->
+
+<div class="loginwindow">
+    <form method="POST" action="./includes/login.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Login</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid" required />
+            <div class="ls-label-text">Username/Email</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="login-submit">Login</button>
+        <p>New to SURF? <a style="color:blue;cursor:pointer;" onclick="openSignupForm()">Sign-up</a></p>
+        
+    </form>
+    </div>
+</div>
+
+<!-- ****************** SIGNUP FORM ******************* -->
+
+<div class="signupwindow">
+    <form method="POST" action="includes/signup.inc.php" class="ls-form">
+        <div class="close-form" onclick="closeForm()">
+            <span class="close-l1"></span>
+            <span class="close-l2"></span>
+        </div>
+        <h1>Signup</h1><br>
+       
+
+        <label class="ls-label">
+            <input type="text" name="uid"required />
+            <div class="ls-label-text">Username</div>
+        </label>
+        <label class="ls-label">
+            <input type="email" name="email" required />
+            <div class="ls-label-text">E-mail</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="pwd" required />
+            <div class="ls-label-text">Password</div>
+        </label>
+        <label class="ls-label">
+            <input type="password" name="conf_pwd" required />
+            <div class="ls-label-text">Confirm Password</div>
+        </label>
+
+        <button type="submit" class="btn" name="signup-submit">Sign-up</button>    
+        <p>Have an account already? <a style="color:blue;cursor:pointer;" onclick="openLoginForm()">Login</a></p>
+        
+    </form>
+    </div>
+</div>
+    <section class="header_section">
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- <div class="header_content">
+                <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/siteImages/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
+                    is a platform to create, use and share virtual pinboards.
+                    We use web based Augmented Reality to enable the creation of and
+                    interaction with Virtual Pinboards. This project runs on any android that supports
+                    ARcore and the webGL standard.
+                </h1>
+                <div class="graphic">
+                    <img src="./assets/siteImages/Android_robot.svg" alt="android_logo" style="height: 60px;">
+                </div>-->
+                <!-- <a class="cta" href="./demo.html">Try Now</a> -->
+
+    </section>
+    
+    
+
+    <section class="signup-now">
+        <h1>Scratch Pad</h1>
+            <h2>Please scratch below</h2></span>
+            <canvas id="drawing-canvas" style="border: 1px solid; margin: 0 auto;"height="128" width="128"></canvas>
+            <!-- <canvas id="canvas" style="border: 1px solid; margin: 0 auto;" height="200" width="800"></canvas> -->
+            <br/>
+            <!-- <p>Press the left mouse button and drag anywhere inside the black box above</p> -->
+            <!-- <canvas id="drawing-canvas" height="128" width="128"></canvas> -->
+            <input type="button" onClick="saveImage();" value="Save as Image">
+            <button class="btn" id="resetButton">Reset</button>
+        <div id="result"></div>
+    </section>
+
+    <footer>
+    <a class="logolink"href="index.php"><img class="logo" src="./assets/siteImages/logo.svg" alt="logo"></a>
+    <div class="footer-links">
+        <ul>
+            <li><a href="./about.php">About</a></li>
+            <li><a href="./contact.php">Contact</a></li>
+            <li><a href="./privacy.php">Privacy</a></li>
+            <li><a href="./terms.php">Terms</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://github.com/">Collaborate</a></li>
+            <li><a href="./bugreport.php">Bug Report</a></li>
+            <li><a href="./contribute.php">Contribute</a></li>
+            <li><a href="./reviews.php">Reviews</a></li>
+        </ul>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/"><img class="icon" src="./assets/siteImages/github.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/instagram.svg" alt=""></a>
+        <a href="#"><img class="icon" src="./assets/siteImages/gmail.svg" alt=""></a>
+      </div>
+    <p>pinboARds is an open-source project made as a final year project and released under the MIT license.</p>
+</footer>
+
+<script src="./js/menu.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./js/savecanvas.js" type="module"></script>
+
+</body>
+</html>
