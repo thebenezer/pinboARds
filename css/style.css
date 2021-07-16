@@ -237,7 +237,7 @@ header{
 }
 
 .plus-cont.open{
-    transform: rotateZ(225deg);
+    transform: rotateZ(135deg);
 }
 
 .create_list{
@@ -293,6 +293,7 @@ header{
 
 .profile-card,.info-card{
     color: black;
+    position: relative;
     width: 80%;
     min-width: 270px;
     max-width: 400px;
@@ -305,33 +306,66 @@ header{
     display: flex;
     flex-direction: row;
 }
-.profile_pic{
+.back_pic{
     flex: 1;
     width: 100%;
     border-radius: 10px 0 0 10px;
+}
+.profile_pic{
+    position: absolute;
+    border-radius: 50%;
+    right: 40%;
+    top: 1rem;
+    border: 5px solid #f6f6f6;
+    width: 80px;
+    height: 80px;
 }
 .profile_info{
     flex: 1;
     text-align: left;
 }
+.card_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    /* grid-template-columns: 1fr 2fr; */
+}
+
+.uid {
+    padding: 1rem;
+    text-align: right;
+    color: green;
+    font-weight: bold;
+    font-size: 16px;
+}
+.name{
+    color: black;
+    padding: 3rem 1rem 0 1rem;
+    text-align: left;
+    margin-top: 10px;
+}
+.desc {
+    padding: 0 1rem;
+    font-size: 12px;
+    /* margin: 0; */
+    height: 100px;
+}
 .actions {
-    /* text-align: left; */
+    text-align: left;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 .actions a img {
-    margin: 0 20px;
+    margin: 1rem;
     width: 30px;
     border: none;
 }
 
 .actions a {
-    border: none;
-    background: none;
-    font-size: 24px;
-    cursor: pointer;
     transition:.2s;
 }
 .actions a:hover{
@@ -352,7 +386,7 @@ header{
 }
 /* ************************ CREATE PAGE **************************** */
 .canvas-section{
-    margin: 20px auto 100px;
+    margin: 20px auto 140px;
     width: 80%;
     transition: all 0.5s ease;
 }
@@ -360,6 +394,7 @@ header{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 .canv-cont div{
     flex: 1;

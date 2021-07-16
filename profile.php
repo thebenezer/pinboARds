@@ -67,15 +67,15 @@
             
                 <div class="profile-card">
                     <!-- <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt=""> -->
-                    <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div>
-                    <!-- <div class="profile_pic" style="background-image: url('./assets/siteImages/profile_pics/<?php// echo $backpic;?>');"></div> -->
-                    <!-- <img class="globe_link" src="./assets/siteImages/profile_pics/<?php //echo $profilepic;?>"> -->
+                    <!-- <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div> -->
+                    <div class="back_pic" style="background-image: url('./assets/profile_pics/<?php echo $backpic;?>');"></div>
+                    <img class="profile_pic" src="./assets/profile_pics/<?php echo $profilepic;?>">
                     <div class="profile_info">
                         <div class="uid"><?php echo $uid;?></div>
                         <h2 class="name"><?php echo $name;?></h2>
                         <div class="desc"><?php echo $about;?></div>
                         <div class="actions">
-                            <a href="editprofile.php"><img src="./assets/siteImages/edit.svg" alt=""></a>
+                            <a href="./editprofile.php"><img src="./assets/siteImages/edit.svg" alt=""></a>
                             <!-- <button><img src="./assets/siteImages/images/friends.svg" alt=""></button> -->
                             <!-- <button><img src="./assets/siteImages/images/paper-plane.svg" alt=""></button> -->
                         </div>
@@ -130,6 +130,5 @@
 
         <?php include("footer.html")?>
 
-        <script src="./js/scroll.js"></script>
 </body>
 </html>

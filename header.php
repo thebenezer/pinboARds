@@ -1,6 +1,39 @@
 <?php
   session_start();
- ?>
+if(isset($_GET['error'])){
+    $error=$_GET['error'];
+    if($error=='wrongpwd'){
+        echo "<script>alert('Incorrect Password');</script>";
+        $uid=$_GET['uid'];
+    }
+    else if($error=='mismatchedpwd'){
+        echo "<script>alert('Passwords do not match.');</script>";
+        $uid=$_GET['uid'];
+        $mail=$_GET['mail'];
+    }
+    else if($error=='uidtaken'){
+        echo "<script>alert('Username already exists');</script>";
+        $mail=$_GET['mail'];
+    }
+    else if($error=='nouser'){
+        echo "<script>alert('Username does not exist');</script>";
+    }
+    else if($error=='sqlerror_1'){
+        echo "<script>alert('Unknown error. Please try again later.');</script>";
+    }
+    else if($error=='sqlerror_2'){
+        echo "<script>alert('Unknown error. Please try again later.');</script>";
+    }
+    else if($error=='sqlerror_3'){
+        echo "<script>alert('Unknown error. Please try again later.');</script>";
+    }
+    else if($error=='unknownerror'){
+        echo "<script>alert('Unknown error. Please try again later.');</script>";
+    }
+}
+
+?>
+
 <div class="navbar"> 
     <a class="logo" href="index.php"><img src="./assets/siteImages/logo.svg" alt="logo"></a>
     <div class="hamburger">
@@ -50,7 +83,7 @@
         </label>
 
         <button type="submit" class="btn" name="login-submit">Login</button>
-        <p>New to SURF? <a style="color:blue;cursor:pointer;" onclick="openSignupForm()">Sign-up</a></p>
+        <p>New to pinboARds? <a style="color:blue;cursor:pointer;" onclick="openSignupForm()">Sign-up</a></p>
         
     </form>
     </div>

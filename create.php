@@ -35,6 +35,7 @@
                 <input type="button" class="cta" style="background: #f54242;" id="resetButton" value="Reset">
             </div>
         </div>
+        <a class="cta-white" style="box-shadow: 0 0 10px rgb(0 0 0 / 0.6);"href="./view.php">View in AR</a>
         
     </section>
 

@@ -100,7 +100,38 @@ width: 100%;
 .hamburger{
     display: none;
 }
-
+/* ************************* cta on white backgrounds ************************** */
+.cta-white{
+    position:relative;
+    /* margin-left: 20px; */
+    background: #f6f6f6;
+    border-radius: 2px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    color: #000000;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0s;
+}
+.cta-white:hover{
+    border: 1px solid #31a7bb;
+    color: #f6f6f6;
+    background: none;
+}
+.cta-white::before {
+    content: '';
+    background: #31a7bb;
+    position:absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.2s ease-in;
+    z-index: -1;
+}
+.cta-white:hover::before {
+width: 100%;
+}
 /* ************************* LOGIN & SIGNUP ************************** */
 
 .loginwindow,.signupwindow{

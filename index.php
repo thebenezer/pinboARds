@@ -16,7 +16,7 @@
                 <div class="graphic">
                     <img src="./assets/siteImages/p0.svg" alt="" srcset="">
                 </div><br><br><br><br>
-                <a class="cta" href="./demo.html">Try Now</a>
+                <a class="cta" href="./demo.php">Try Now</a>
             </div>
         </header>
     </section>

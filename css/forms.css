@@ -1,0 +1,139 @@
+.forms {
+    text-align: center;
+    margin: auto;
+    padding: 40px 0 20px 0;
+    width: 50%;
+}
+
+label {
+    display: block;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    /* text-align: left; */
+}
+.label-text,.label-textarea {
+    color:#000000;
+    cursor: text;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    text-transform: uppercase;
+    transform: translateY(-34px);
+    transition: all 0.3s;
+    text-align: left;
+}
+.label-textarea{
+    margin:45px 0 -115px 0;
+    /* transform: translateY(15px); */
+}
+.textbox textarea {
+    border: none;
+    outline: none;
+    border-bottom:2px solid #000000;
+    font-size: 18px;
+    width: 100%;
+    height: 100px;
+    color: #000000;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.textbox textarea.small {
+    border: none;
+    border:2px solid #000000;
+    margin-bottom: 60px;
+    transform: translateY(64px);
+}
+.label-textarea.small{
+    font-size: 13px;
+    transform: translateY(-74px);
+}
+
+.textbox textarea:focus+.label-text {
+    color: #000000;
+    font-size: 13px;
+    transform: translateY(-74px);
+}
+
+
+label input {
+    border: 0;
+    border-bottom: 2px solid #000000;
+    background-color: #f6f6f6;
+    color: #000000;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    /* text-align: left; */
+    transition: all 0.3s;
+    width: 100%;
+}
+
+
+label input:focus+.label-text {
+    color: #000000;
+    font-size: 13px;
+    transform: translateY(-74px);
+}
+
+label input:valid+.label-text {
+    font-size: 13px;
+    transform: translateY(-74px);
+}
+
+button {
+    background-color: #5C5C5C;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: all 200ms;
+}
+
+button:hover,
+button:focus {
+    background-color: #fff;
+    border-color: rgb(0, 0, 0);
+    color: #53acff;
+    outline: 0;
+}
+
+
+@media screen and (max-width:768px){
+    .forms{
+        width: 100%;
+    }
+}
+
+/* ******EDIT PROFILE FORM */
+
+.about-text{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    transform: translateY(-30px);
+    font-size: 13px;
+}
+.editabout{
+    outline: none;
+    border:2px solid #000000;
+    font-size: 16px;
+    width: 100%;
+    height: 100px;
+    color: #000000;
+}
+.edit_profile{
+    flex: 1;
+    width: 100%;
+}
+.edit_profile input{
+    font-size: 18px;
+}
+.edit_profile label{
+    margin-top: 20px;
+}
