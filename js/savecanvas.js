@@ -1,4 +1,5 @@
 
+const result = document.getElementById( 'result' );
 
 
 import * as THREE from '.././js/three/build/three.module.js';
@@ -78,6 +79,7 @@ function draw( drawContext, x, y ) {
 
 //this function clears the canvas
 function Reset() {
+    result.style.display="none";
     drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);
     drawingCanvas.width=drawingCanvas.height;
     defaultCanvas();

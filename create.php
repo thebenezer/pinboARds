@@ -22,12 +22,15 @@
         <div class="canv-cont">
             <div>
                 <p>Input Here</p>
+                <div>
                 <canvas id="drawing-canvas" height="200" width="128" style="border: 1px solid;margin: 0 auto;cursor:crosshair;"></canvas>
+
+                </div>
                 <p>Press the left mouse button and drag anywhere inside the black box above</p>
             </div>
             <div>
-                <p>Preview</p>
                 <div id="result"></div>
+                <img src="./assets/siteImages/832.gif" class="loader" alt="">
                 <input type="button" class="cta" style="background: linear-gradient(150deg,#330867,#31a7bb);;" onclick="saveImage()" value="Save">
                 <input type="button" class="cta" style="background: #f54242;" id="resetButton" value="Reset">
             </div>
@@ -41,12 +44,15 @@
     <script src="./js/savecanvas.js" type="module"></script>
     <script>
         function saveImage(){
+            // document.getElementById("result").style.display="block";
+            // Asynchronus POST 
             try{
                 var canvas = document.getElementById("drawing-canvas");
                 var data = canvas.toDataURL("image/png");
+                var uid=<?php echo '"'.$_SESSION['uid'].'"';?>;
                 $.ajax({
                     url: "includes/saveAsImage.php",
-                    data:{data:data},
+                    data:{data:data,uid:uid},
                     type:"POST",
                     success:function(r){
                         $("#result").html(r);
@@ -56,6 +62,18 @@
             }catch(e){
                 alert(e.message);
             }
+
+            // To Hide and show loading animation when save button is clicked
+            $(document).on({
+                ajaxStart: function(){
+                document.querySelector(".loader").style.display="block";
+                    // $(".canvas-section").style.background="black";
+                },
+                ajaxStop: function(){ 
+                document.querySelector(".loader").style.display="none";
+                    // $(".canvas-section").style.background="black";
+                }    
+            });
         }
     </script>
 

@@ -354,6 +354,7 @@ header{
 .canvas-section{
     margin: 20px auto 100px;
     width: 80%;
+    transition: all 0.5s ease;
 }
 .canv-cont{
     display: flex;
@@ -374,7 +375,9 @@ header{
     letter-spacing: 4px;
     margin: 30px 0 -80px 0;
 }
-
+.loader{
+    display:none;
+}
 /* ************************ MOBILE DESIGN **************************** */
 
 @media screen and (max-width: 768px){
