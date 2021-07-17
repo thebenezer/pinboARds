@@ -59,15 +59,15 @@
     </section>
 
     <section class="signup-now">
-    <article class="profile">
-                <form action="./includes/edit.inc.php" method="post" enctype="multipart/form-data" class="edit_profile">
+    <article class="profile" style="padding:40px 0 80px 0;">
+                <form  action="./includes/edit.inc.php" method="post" enctype="multipart/form-data" class="edit_profile">
                     <label>
                         <input type="text" name="name" placeholder="<?php echo $name;?>" value="<?php echo $name;?>"/>
                         <div class="label-text">Full Name</div>
                     </label>
                     <label>
                         <input type="text" name="phno"placeholder="<?php echo $phno;?>" value="<?php echo $phno;?>"/>
-                        <div class="label-text">Pnone Number</div>
+                        <div class="label-text">Phone Number</div>
                     </label>
                     <label>
                         <input type="number" min="0" name="age" placeholder="<?php echo $age;?>" value="<?php echo $age;?>"/>

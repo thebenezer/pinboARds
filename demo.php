@@ -14,17 +14,17 @@
         <header class="demo">
           <h1>Try these demos</h1>
           <div class="democards">
-            <a href="./demo/d1.html" class="card">
+            <a href="./d1.php" class="card">
               <img src="./assets/siteImages/temp1.jpg" alt="" class="card-img">
               <h3>Shopping List</h3>
               <p>Create a shopping list and view it in AR</p>
             </a>
-            <a href="./demo/d2.html" class="card">
+            <a href="./d2.php" class="card">
               <img src="./assets/siteImages/temp2.jpg" alt="" class="card-img">
               <h3>Notice Board</h3>
               <p>Explore the contents of a sample notice board</p>
             </a>
-            <a href="./demo/d3.html" class="card">
+            <a href="./d3.php" class="card">
               <img src="./assets/siteImages/temp3.jpg" alt="" class="card-img">
               <h3>Scribble Board</h3>
               <p>Make a pinboard with hand written/drawn content </p>
@@ -39,7 +39,7 @@
             <h2>Want to Get Started?</h2>
             <div class="content"></div>
             <div class="graphic"></div>
-            <a class="cta" href="demo.html" style="filter:invert(1);">Signup Now</a>
+            <a class="cta-white" onclick="openSignupForm()" >Signup Now</a>
         </article>
 
     </section>

@@ -59,7 +59,7 @@
             <h2>Want to Get Started?</h2>
             <div class="content"></div>
             <div class="graphic"></div>
-            <a class="cta" href="demo.html">Signup Now</a>
+            <a class="cta" onclick="openSignupForm()">Signup Now</a>
         </article>
 
     </section>

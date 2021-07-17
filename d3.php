@@ -4,8 +4,8 @@
 		<title>Image Board</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<link type="text/css" rel="stylesheet" href="../css/basic.css">
-		<link type="text/css" rel="stylesheet" href="../css/style.css">
+		<link type="text/css" rel="stylesheet" href="./css/basic.css">
+		<link type="text/css" rel="stylesheet" href="./css/style.css">
 		<style>
 			#drawing-canvas {
 				/* position: absolute; */
@@ -13,7 +13,7 @@
 				/* top: 50px; */
 				/* right: 50px; */
 				margin-top: 50px;
-				z-index: 3000;
+				z-index: 2;
 				cursor: crosshair;
 				touch-action: none;
 			}
@@ -23,23 +23,8 @@
 		</style>
 	</head>
 	<body>
-        <div class="navbar"> 
-            <a class="logo" href="../index.php"><img src="../assets/siteImages/logo.svg" alt="logo"></a>
-            <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-            </div>
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="../about.php">About</a></li>
-                    <li><a href="../demo.php">Demo</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#" class="cta">Signup</a></li>
-                </ul>
-            </nav>
-            
-        </div>
+	<?php include("header.php")?>
+
         <section class="header_section">
             <header class="demo">
               <h1>Demo 3 - Scribble Board</h1>
@@ -47,13 +32,14 @@
             </header>
         </section>
 
-        <canvas id="drawing-canvas" height="128" width="128"></canvas>
+        <canvas id="drawing-canvas" style="background: green;" width="300" height="200"></canvas>
 
+		<script src="./js/menu.js"></script>
 
 		<script type="module">
 
-            import * as THREE from '.././js/three/build/three.module.js';
-            import { ARButton } from '.././js/three/examples/jsm/webxr/ARButton.js';
+            import * as THREE from './js/three/build/three.module.js';
+            import { ARButton } from './js/three/examples/jsm/webxr/ARButton.js';
 			let container;
 			let camera, scene, renderer,material;
 			let controller;
@@ -80,7 +66,7 @@
                 // draw white background
 
                 drawingContext.fillStyle = '#FFFFFF';
-                drawingContext.fillRect( 0, 0, 128, 128 );
+                drawingContext.fillRect( 0, 0, 300,200 );
 
                 // set canvas as material.map (this could be done to any map, bump, displacement etc.)
 

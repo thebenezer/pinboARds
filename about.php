@@ -15,10 +15,10 @@
             
             <div class="header_content">
                 <h1 style="text-align: left;max-width: 500px;margin: auto; line-height: 50px;"><img src="./assets/siteImages/logo.svg" style="height: 25px;transform: translateY(6px);" alt="">  
-                    is a platform to create, use and share virtual pinboards.
-                    We use web based Augmented Reality to enable the creation of and
+                    is a platform to create, use and share Virtual Pinboards.
+                    We use web based Augmented Reality to enable the creation and
                     interaction with Virtual Pinboards. This project runs on any android that supports
-                    ARcore and the webGL standard.
+                    ARcore, WebXR and WebGL standard. <a style="color:black;"href="https://apps.apple.com/us/app/webxr-viewer/id1295998056">WebXR Viewer</a> can be used on iOS. 
                 </h1>
                 <div class="graphic">
                     <img src="./assets/siteImages/Android_robot.svg" alt="android_logo" style="height: 60px;">

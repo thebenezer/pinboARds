@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Image Board</title>
+		<title>ShoppingList</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<link type="text/css" rel="stylesheet" href="../css/basic.css">
-		<link type="text/css" rel="stylesheet" href="../css/style.css">
-		<link type="text/css" rel="stylesheet" href="../css/demo.css">
+		<link type="text/css" rel="stylesheet" href="./css/basic.css">
+		<link type="text/css" rel="stylesheet" href="./css/style.css">
+		<!-- <link type="text/css" rel="stylesheet" href="./css/demo.css"> -->
+		<style>
+			body{
+				background: #010100;
+			}
+			.flex-inp{
+				display: flex;
+				justify-content: space-around;
+				width: 80%;
+				margin: 20px auto;
+				flex-wrap: wrap;
+			}
+		</style>
 	</head>
 	<body>
-        <div class="navbar"> 
-            <a class="logo" href="../index.php"><img src="../assets/siteImages/logo.svg" alt="logo"></a>
-            <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-            </div>
-            <nav class="nav">
-                <ul class="nav-links">
-                   h <li><a href="../about.php">About</a></li>
-                    <li><a href="../demo.php">Demo</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#" class="cta">Signup</a></li>
-                </ul>
-            </nav>
-            
-        </div>
+	<?php include("header.php")?>
+
         <section class="header_section">
             <header class="demo">
-              <h1>Demo 2 - Image Board</h1>
-			  <p>Click on View AR, then point the camera onto a non-reflective surface and tap the screen when the reticle appears</p>
+              <h1>Demo 1 - Shopping List</h1>
+			  <p>Write down a list of items and launch AR.</p>
+             
             </header>
         </section>
+		<div class="flex-inp">
+			<div style="margin-top:30px;">    
+				<textarea id="item" name="message" rows="10" cols="30"placeholder="Enter your items"></textarea>
+			</div>
+			<canvas id="canvas" ></canvas>
+		</div>
+        
 
+		<script src="./js/menu.js"></script>
 		<script type="module">
 
-			import * as THREE from '.././js/three/build/three.module.js';
-            import { ARButton } from '.././js/three/examples/jsm/webxr/ARButton.js';
+            import * as THREE from './js/three/build/three.module.js';
+			import { ARButton } from './js/three/examples/jsm/webxr/ARButton.js';
+
+            var txt_array=[] ;
+            var canvas = document.getElementById('canvas'),
+            ctx = canvas.getContext('2d');
+
+
+            window.onload=function(){
+                function draw(event) {
+                    var text = document.getElementById('item').value;
+                    txt_array= text.split(/\n/);
+                }
+                window.addEventListener("keyup", draw, true);
+            }
+            var width = window.innerWidth, height = window.innerHeight / 2;
+            var size = 256;
+
+            function changeCanvas() {
+                ctx.fillStyle = '#31a7bb';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'white';
+                ctx.fillRect(10, 10, canvas.width - 20, canvas.height - 20);
+                ctx.fillStyle = 'black';
+                ctx.textAlign = "start";
+                // ctx.textBaseline = "middle";
+                ctx.font = '20pt Arial';
+                ctx.fillStyle = 'Green';
+                ctx.fillText("Shopping List", 10, 30);
+
+                ctx.font = '10pt Arial';
+                ctx.fillStyle = 'black';
+                for ( let i = 0; i < txt_array.length; i ++ ) {	
+                    ctx.fillText( (i+1)+". "+txt_array[ i ], 10, 50+15 * i );
+                }
+            }
+
 			let container;
 			let camera, scene, renderer;
 			let controller;
@@ -45,6 +86,7 @@
 
 			let hitTestSource = null;
 			let hitTestSourceRequested = false;
+            var Texture = new THREE.Texture(canvas);
 
 			init();
 			animate();
@@ -77,9 +119,13 @@
 				//
 
 				// const geometry = new THREE.PlaneGeometry( 0.1, 0.1, 0.2, 32 ).translate( 0, 0.1, 0 );
-				const geometry = new THREE.PlaneGeometry(0.75,0.5);
-				var loader=new THREE.TextureLoader();
-    			var Texture = loader.load("../assets/siteImages/temp2.jpg"); 
+				// const geometry = new THREE.PlaneGeometry(0.75,0.5);
+				// var loader=new THREE.TextureLoader();
+    			// var Texture = loader.load("info.jpg"); 
+                
+                
+                // var material = new THREE.MeshBasicMaterial({ map: texture });
+                var geometry = new THREE.PlaneGeometry( 0.5, 0.5 );
 				// const geometry = new THREE.PlaneGeometry( width = 0.75,height=0.5);
 
 				function onSelect() {
@@ -92,6 +138,7 @@
 						mesh.position.setFromMatrixPosition( reticle.matrix );
 						// mesh.scale.y = Math.random() * 2 + 1;
 						scene.add( mesh );
+                        canvas.width = canvas.height = size;
 
 					}
 
@@ -127,7 +174,7 @@
 			//
 
 			function animate() {
-
+                
 				renderer.setAnimationLoop( render );
 
 			}
@@ -182,6 +229,8 @@
 					}
 
 				}
+                changeCanvas();
+                Texture.needsUpdate = true;
 
 				renderer.render( scene, camera );
 
