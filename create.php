@@ -20,7 +20,7 @@
 
     <section class="canvas-section">
         <div class="canv-cont">
-            <div>
+            <div class="canvas-input">
                 <p>Input Here</p>
                 <div>
                 <canvas id="drawing-canvas" height="200" width="128" style="border: 1px solid;margin: 0 auto;cursor:crosshair;"></canvas>
@@ -28,20 +28,17 @@
                 </div>
                 <p>Press the left mouse button and drag anywhere inside the black box above</p>
             </div>
-            <div>
-            <div id="result">blank</div>
-        <p id = "lati">-1</p>
-        <p id = "longi">-1</p>
-                <p id = "status"></p>
-                <!-- <p id = "saved"></p> -->
+            <div class="canvas-settings">
+                
                 <div class="save_progress">
                     <img src="./assets/siteImages/832.gif" class="loader" alt="">
                     <img src="./assets/siteImages/saved.svg" class="saved" alt="">
+                    <img src="./assets/siteImages/location.svg" class="location" alt="">
                 </div>
-                <input type="button" class="cta" style="background: linear-gradient(150deg,#330867,#31a7bb);;" onclick="saveImage()" value="Save">
+
+                <input type="button" class="cta" style="background: linear-gradient(150deg,#330867,#31a7bb);" onclick="saveImage()" value="Save">
                 <input type="button" class="cta" style="background: #f54242;" id="resetButton" value="Reset">
                 <input type="button" class="cta" style="background: #f67898;" id = "find-me" value="Pin To My Location">
-                <!-- <button id = "find-me">Show my location</button><br/> -->
             </div>
         </div>
         <a class="cta-white" id="view" style="box-shadow: 0 0 10px rgb(0 0 0 / 0.6);" href="./view.php?">View in AR</a>
@@ -49,7 +46,11 @@
     </section>
 
     <div style="display:hiddden;">
-        
+        <div id="result">blank</div>
+        <p id = "lati">999</p>
+        <p id = "longi">999</p>
+        <p id = "loc_status"></p>
+
     </div>
 
     <?php include("footer.html")?>
@@ -59,6 +60,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/savecanvas.js" type="module"></script>
     <script>
+        
         function saveImage(){
             // document.getElementById("result").style.display="block";
             // Asynchronus POST 
@@ -84,8 +86,8 @@
                         // console.log($pid);
                         $("#result").html(r);
                         document.getElementById("view").href="./view.php?pid="+r;
-                        document.getElementById("saved").innerHTML="Saved";
-                        document.querySelector(".loader").style.display="block";
+                        // document.getElementById("saved").innerHTML="Saved";
+                        document.querySelector(".saved").style.display="block";
                     }
             
                 });

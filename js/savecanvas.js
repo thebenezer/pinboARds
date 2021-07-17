@@ -79,7 +79,13 @@ function draw( drawContext, x, y ) {
 
 //this function clears the canvas
 function Reset() {
-    result.style.display="none";
+    // document.getElementById("lati").innerHTML="...";
+    document.querySelector(".saved").style.display="none";
+    document.querySelector(".location").style.display="none";
+    document.getElementById("lati").innerHTML=999;
+    document.getElementById("longi").innerHTML=999;
+
+    // result.style.display="none";
     drawingContext.clearRect(0,0,drawingCanvas.width,drawingCanvas.height);
     drawingCanvas.width=drawingCanvas.height;
     defaultCanvas();
