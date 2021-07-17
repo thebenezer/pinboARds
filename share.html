@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Test share api - X Byte Lab</title>
+</head>
+
+<body>
+
+
+<button class="share-button">Share</button>
+
+<script type="text/javascript">
+const shareButton = document.querySelector('.share-button');
+
+shareButton.addEventListener('click', event => {
+  if (navigator.share) { 
+   navigator.share({
+      title: 'WebShare API Demo',
+      url: 'https://github.com'
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+    } else {
+        alert("share api not supported");
+    }
+});
+
+</script>
+</body>
+</html>
