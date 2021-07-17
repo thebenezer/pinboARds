@@ -29,13 +29,13 @@
                 <p>Press the left mouse button and drag anywhere inside the black box above</p>
             </div>
             <div>
-                <div id="result"></div>
+                <div id="result">blank</div>
                 <img src="./assets/siteImages/832.gif" class="loader" alt="">
                 <input type="button" class="cta" style="background: linear-gradient(150deg,#330867,#31a7bb);;" onclick="saveImage()" value="Save">
                 <input type="button" class="cta" style="background: #f54242;" id="resetButton" value="Reset">
             </div>
         </div>
-        <a class="cta-white" style="box-shadow: 0 0 10px rgb(0 0 0 / 0.6);"href="./view.php">View in AR</a>
+        <a class="cta-white" id="view" style="box-shadow: 0 0 10px rgb(0 0 0 / 0.6);" href="./view.php?">View in AR</a>
         
     </section>
 
@@ -49,14 +49,21 @@
             // Asynchronus POST 
             try{
                 var canvas = document.getElementById("drawing-canvas");
+                var pid=document.getElementById("result").innerHTML;
                 var data = canvas.toDataURL("image/png");
                 var uid=<?php echo '"'.$_SESSION['uid'].'"';?>;
                 $.ajax({
-                    url: "includes/saveAsImage.php",
-                    data:{data:data,uid:uid},
+                    url: "includes/savecanvas.inc.php",
+                    data:{
+                        data:data,
+                        uid:uid,
+                        pid:pid},
                     type:"POST",
                     success:function(r){
-                        $("#result").html(r);
+                        // $pid=r;
+                        // console.log($pid);
+                        // $("#result").html(r);
+                        document.getElementById("view").href="./view.php?pid="+r;
                     }
             
                 });
