@@ -92,7 +92,7 @@
                 <div class="profile-card">
                     <!-- <img class="profile_pic" src="https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg" alt=""> -->
                     <!-- <div class="profile_pic" style="background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg');"></div> -->
-                    <div class="back_pic" style="background: url('./assets/profile_pics/<?php echo $backpic;?>');"></div>
+                    <div class="back_pic" style="background-image: url('./assets/profile_pics/<?php echo $backpic;?>') no-repeat fixed center;"></div>
                     <img class="profile_pic" src="./assets/profile_pics/<?php echo $profilepic;?>">
                     <div class="profile_info">
                         <div class="uid"><?php echo $uid;?></div>
