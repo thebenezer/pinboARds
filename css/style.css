@@ -371,6 +371,12 @@ header{
 .actions a:hover{
     opacity: 0.6;
 }
+
+.icon{
+    width: 48px;
+    cursor: pointer;
+    margin: 3px;
+}
 /* ************************ PROFILE PAGE **************************** */
 /* ************************ Pinboards section **************************** */
 .pinboards-section{

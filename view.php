@@ -57,7 +57,7 @@
 
 				const geometry = new THREE.PlaneGeometry(0.75,0.5);
 				var loader=new THREE.TextureLoader();
-    			var Texture = loader.load(<?php echo '"./assets/saved_pins/'.$_GET['pid'].'"';?>); 
+    			var Texture = loader.load(<?php echo '"./assets/saved_pins/'.$_GET['pid'].'.png"';?>); 
 				// const geometry = new THREE.PlaneGeometry( width = 0.75,height=0.5);
 
 				function onSelect() {
