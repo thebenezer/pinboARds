@@ -43,12 +43,11 @@
         
     </section>
 
-    <div style="display:hiddden;">
+    <div class="hide"style="display:none;">
         <div id="result">blank</div>
         <p id = "lati">999</p>
         <p id = "longi">999</p>
         <p id = "loc_status"></p>
-
     </div>
 
     <?php include("footer.html")?>
