@@ -8,7 +8,7 @@ We created AR pinboards as our final year project in college, It is a responsive
 <hr>
 
 ## Live Project
-Follow the link to check out the app [here](https://thebenezer.github.io/pinboARds/)
+Follow the link to check out the demo app [here](https://thebenezer.github.io/pinboARds/demos)
 
 <hr>
 
