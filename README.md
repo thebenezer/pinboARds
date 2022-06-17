@@ -15,7 +15,7 @@ Follow the link to check out the demo app [here](https://thebenezer.github.io/pi
 
 ## Demo
 
-<video src="assets/readme_images/ezgif-4-938846952c.mov" width=180></video>
+<video src="assets/readme_images/video.mp4"> </video>
 
 <hr>
 
