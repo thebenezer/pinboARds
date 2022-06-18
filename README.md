@@ -17,6 +17,8 @@ Follow the link to check out the demo app [here](https://thebenezer.github.io/pi
 
 <video src="assets/readme_images/video.mp4"> </video>
 
+[![video]](assets/readme_images/video.mp4)
+
 <hr>
 
 ## Tools Used
