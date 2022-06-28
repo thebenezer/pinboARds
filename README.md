@@ -15,14 +15,9 @@ Follow the link to check out the demo app [here](https://thebenezer.github.io/pi
 
 
 ## Demo
-<div align='left'>
-https://user-images.githubusercontent.com/54198861/176197306-803457c1-a460-41cb-8da8-0fb6940ae155.mp4
-</div>
 
-<div align='right'>
 https://user-images.githubusercontent.com/54198861/176197306-803457c1-a460-41cb-8da8-0fb6940ae155.mp4
-</div>
-<hr>
+
 
 ## Tools Used
 <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
