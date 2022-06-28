@@ -13,6 +13,10 @@ Follow the link to check out the demo app [here](https://thebenezer.github.io/pi
 
 <hr>
 
+
+https://user-images.githubusercontent.com/54198861/176197306-803457c1-a460-41cb-8da8-0fb6940ae155.mp4
+
+
 ## Demo
 
 <video src="assets/readme_images/video.mp4"> </video>
